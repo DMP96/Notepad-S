@@ -1,0 +1,130 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+footer {
+    color: #333;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    user-select: none; /* Prevent text selection */
+}
+
+#tabs-container {
+    display: flex;
+    justify-content: space-between; /* To push tabs to the left and buttons to the right */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#tabs {
+    display: flex;
+    justify-content: flex-start; /* Align tabs to the left */
+    overflow-x: auto;
+}
+
+.tab {
+    padding: 10px 20px;
+    background-color: #e0e0e0;
+    border-radius: 5px 5px 0 0;
+    cursor: pointer;
+    margin-right: 5px; /* Adjust spacing between tabs */
+    user-select: none; /* Prevent text selection */
+    white-space: nowrap; /* Prevent text wrapping */
+}
+
+.tab.active {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    color: #007BFF; /* Change text color for the active tab */
+}
+
+.note-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    height: calc(100vh - 160px); /* Adjusted height to accommodate header and tabs */
+    margin-top: -10px; /* Remove any top margin */
+    user-select: none; /* Prevent text selection */
+}
+
+#title {
+    width: 100%; /* 22px for padding and border */
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#editor {
+    flex: 1; /* Fill remaining vertical space */
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    resize: none; /* Disable textarea resizing */
+}
+
+/* Buttons */
+#buttons {
+    display: flex;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+    background-color: #ccc;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin-left: 5px;
+    font-size: 16px;
+    user-select: none; /* Prevent text selection */
+}
+
+button:hover {
+    background-color: #aaa;
+    color: #fff; /* White text color on hover */
+}
+
+.redButton:hover, .redButton:active {
+    background-color: #ff0000; /* Red background color on hover */
+}
+
+.blueButton:hover, .blueButton:active {
+    background-color: #007BFF; /* Blue background color on hover */
+}
+
+.greenButton:hover, .greenButton:active {
+    background-color: #28a745; /* Green background color on hover */
+}
+
+.yellowButton:hover, .yellowButton:active {
+    background-color: #ffc107; /* Yellow background color on hover */
+}
+
+.orangeButton:hover, .orangeButton:active {
+    background-color: #ff6b00; /* Darker orange background color on hover */
+}
+
+.purpleButton:hover, .purpleButton:active {
+    background-color: #6f42c1; /* Purple background color on hover */
+}

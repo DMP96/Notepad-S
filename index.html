@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notepad</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div class="header">
+    <button id="open-file" class="blueButton" onclick="openFile()" title="Open File"><i class="bx bxs-folder-open"></i></button>
+    <button id="save-file" class="purpleButton" onclick="saveFile()" title="Save File"><i class="bx bxs-save"></i></button>
+
+    <button class="greenButton" onclick="cutText()" title="Cut Selected"><i class="bx bx-cut"></i></button>
+    <button class="yellowButton" onclick="copyText()" title="Copy Selected"><i class="bx bxs-copy"></i></button>
+    <button class="orangeButton" onclick="pasteText()" title="Paste"><i class="bx bxs-paste"></i></button>
+    <button class="redButton" onclick="deleteText()" title="Delete Selected"><i class="bx bxs-trash-alt"></i></button>
+</div>
+
+<div id="tabs-container">
+    <div id="tabs">
+        <div class="tab active" id="tab0" onclick="switchTab(0)">New Note</div>
+    </div>
+    <div id="buttons">
+        <button class="blueButton" onclick="openNewNote()" title="New Note">+</button>
+        <button class="redButton" onclick="closeNote()" title="Close Note">x</button>
+    </div>
+</div>
+
+<div class="note-container">
+    <input type="text" id="title" placeholder="Title..." autocomplete="off" autofocus oninput="updateTabTitle()">
+    <textarea id="editor" placeholder="Your text here..."></textarea>
+</div>
+
+<footer>&copy; 2024 DMP</footer>
+</body>
+</html>
