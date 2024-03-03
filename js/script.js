@@ -36,18 +36,6 @@ function openFile() {
     input.click();
 }
 
-// Function to toggle highlighting on/off
-function toggleHighlight() {
-    var editor = document.getElementById("editor");
-    if (editor.classList.contains("hljs")) {
-        editor.classList.remove("hljs");
-        hljs.highlightBlock(editor);
-    } else {
-        editor.classList.add("hljs");
-        hljs.highlightBlock(editor);
-    }
-}
-
 function deleteText() {
     var textArea = document.getElementById("editor");
     var selectionStart = textArea.selectionStart;
