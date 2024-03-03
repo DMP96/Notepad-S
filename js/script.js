@@ -109,12 +109,20 @@ function pasteText() {
         .then(function(text) {
             var textArea = document.getElementById("editor");
             textArea.focus();
-            textArea.value += text;
+            var before = textArea.value.substring(0, textArea.selectionStart);
+            var after = textArea.value.substring(textArea.selectionStart, textArea.value.length);
+            textArea.value = before + text + after;
+
+            // Set cursor position
+            var newCursorPos = before.length + text.length;
+            textArea.selectionStart = newCursorPos;
+            textArea.selectionEnd = newCursorPos;
         })
         .catch(function(err) {
             console.error('Unable to paste text: ', err);
         });
 }
+
 
 // Function to switch between tabs
 function switchTab(tabIndex) {
